@@ -32,8 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(intent.EXTRA_SUBJECT, "just java app " + getName());
+        intent.putExtra(intent.EXTRA_SUBJECT, "Cilantro Cafe  " + getName() + " ORDER");
+        //intent.putExtra(intent.EXTRA_EMAIL,"mohamedhesho96@gmail.com" ); not Working
+        intent.putExtra(android.content.Intent.EXTRA_EMAIL,new String[] { "mohamedhesho96@gmail.com"  });
+
         intent.putExtra(intent.EXTRA_TEXT, createOrderSummary(x, y, getName()));
+
+
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
@@ -60,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         priceMessage += "\nQuantity : " + number;
         priceMessage += "\nthe  Total Cost of Coffe : " + price(number, hasWhippedCream, Chocolataa) + "$";
         priceMessage += " \n" + getString(R.string.Happy_Drink);
-        Toast.makeText(this, "Happy Drink ;)", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Happy Drink and Keep Smile  ;)", Toast.LENGTH_LONG).show();
 
 
         return priceMessage;
