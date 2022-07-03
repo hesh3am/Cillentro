@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         priceMessage += "\nQuantity : " + number;
         priceMessage += "\nthe  Total Cost of Coffe : " + price(number, hasWhippedCream, Chocolataa) + "$";
         priceMessage += " \n" + getString(R.string.Happy_Drink);
-        Toast.makeText(this, "Happy Drink and Keep Smile  ;)", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Happy Drink and Keep Smile   ;)", Toast.LENGTH_LONG).show();
 
 
         return priceMessage;
